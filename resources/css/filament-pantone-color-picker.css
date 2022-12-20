@@ -1,0 +1,25 @@
+.pantone-color-picker {
+    .choices {
+        @apply w-full border-none outline-none shadow-none ring-0 focus:ring-0;
+        .choices__list {
+            &.choices__list--dropdown {
+                .choices__item {
+                    @apply relative pr-[3em] pl-7;
+                    span {
+                        @apply h-full absolute left-0 top-0 w-4;
+                    }
+                }
+            }
+            .choices__item {
+                &.choices__item--selectable {
+                    &.is-highlighted {
+                        @apply bg-gray-100 text-black;
+                    }
+                }
+            }
+        }
+        .choices__inner {
+            @apply relative rounded-none bg-transparent border border-gray-300 outline-none shadow-none ring-0 focus:ring-0 overflow-hidden rounded-lg;
+        }
+    }
+}
