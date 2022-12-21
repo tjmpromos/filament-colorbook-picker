@@ -86,7 +86,7 @@
                             getSearchResultsUsing: async (search) => {
                                 return await $wire.getSelectSearchResults(@js($getStatePath()), search)
                             },
-                            isHtmlAllowed: @js($isHtmlAllowed()),
+                            isHtmlAllowed: true,
                             hasDynamicOptions: @js($hasDynamicOptions()),
                             hasDynamicSearchResults: @js($hasDynamicSearchResults()),
                             options: @js($getOptionsForJs()),
