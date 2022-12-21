@@ -2,6 +2,10 @@
 
 FilamentPHP field to show options based on a predefined color book, with previews of the color value in the dropdown and around the field after selection.
 
+This could be used for any number of colorbooks such as [Pantone®️](https://www.pantone.com/color-systems/pantone-color-systems-explained), [GMG OpenColor](https://gmgcolor.com/products/opencolor/), [Project BBCG](https://www.projectbbcg.guide/), [Swatchos](https://www.swatchos.com/), [SMS](https://www.spot-nordic.com/sms/) or any other proprietary color system such as thread colors in embroidery, shirt colors in printing, custom ink colors in printing, etc... It's really up to you!
+
+All you need to do is provide the proper name (called label here), the value you want to pass to your form (usually the same as the label, but you may want to snake_case it or something) and a hex value (no # as of now, but I plan on adding that check in soon).
+
 ## Requirements
 - PHP 8.0+
 - Laravel 8.0+
