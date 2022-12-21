@@ -12,6 +12,7 @@ All you need to do is provide the proper name (called label here), the value you
 - Maybe change `hex` to `colorValue` so that its clear you can pass in any valid CSS value (?)
 - Add color definitions to config file so that they can easily be called in the `->options()` method. Need to allow for multiple color books with any name.
 - Pass the `label` to a repeater label so that the label displays as the pretty name instead of the actual value
+- Maybe add an image file option so that the color pin in the options can be texturized for things like shirts or embroidery thread
 
 
 ## Requirements
