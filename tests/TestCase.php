@@ -1,9 +1,10 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker\Tests;
+namespace Dymond\FilamentColorbookPicker\Tests;
 
-use dymond\FilamentColorbookPicker\FilamentColorbookPickerServiceProvider;
+use Dymond\FilamentColorbookPicker\FilamentColorbookPickerServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -20,6 +21,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
+            LiveWireServiceProvider::class,
             FilamentColorbookPickerServiceProvider::class,
         ];
     }

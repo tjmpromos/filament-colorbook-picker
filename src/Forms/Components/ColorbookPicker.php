@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker\Forms\Components;
+namespace Dymond\FilamentColorbookPicker\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Concerns\HasPlaceholder;

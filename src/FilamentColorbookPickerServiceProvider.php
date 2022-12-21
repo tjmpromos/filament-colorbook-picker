@@ -1,8 +1,8 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker;
+namespace Dymond\FilamentColorbookPicker;
 
-use dymond\FilamentColorbookPicker\Forms\Components\ColorbookPicker;
+use Dymond\FilamentColorbookPicker\Forms\Components\ColorbookPicker;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

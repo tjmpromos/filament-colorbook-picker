@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "dymond\\FilamentColorbookPicker\\": "src",
-            "dymond\\FilamentColorbookPicker\\Database\\Factories\\": "database/factories"
+            "Dymond\\FilamentColorbookPicker\\": "src",
+            "Dymond\\FilamentColorbookPicker\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "dymond\\FilamentColorbookPicker\\Tests\\": "tests"
+            "Dymond\\FilamentColorbookPicker\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -59,10 +59,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "dymond\\FilamentColorbookPicker\\FilamentColorbookPickerServiceProvider"
+                "Dymond\\FilamentColorbookPicker\\FilamentColorbookPickerServiceProvider"
             ],
             "aliases": {
-                "FilamentColorbookPicker": "dymond\\FilamentColorbookPicker\\Facades\\FilamentColorbookPicker"
+                "FilamentColorbookPicker": "Dymond\\FilamentColorbookPicker\\Facades\\FilamentColorbookPicker"
             }
         }
     },

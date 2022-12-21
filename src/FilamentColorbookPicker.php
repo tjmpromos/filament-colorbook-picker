@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker;
+namespace Dymond\FilamentColorbookPicker;
 
 class FilamentColorbookPicker
 {

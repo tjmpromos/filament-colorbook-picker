@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker\Forms\Components\Concerns;
+namespace Dymond\FilamentColorbookPicker\Forms\Components\Concerns;
 
 use Closure;
 
