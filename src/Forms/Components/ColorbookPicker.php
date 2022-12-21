@@ -678,6 +678,11 @@ class ColorbookPicker extends Field
 
     public function getOptionsLimit(): int
     {
+
+        if ($configOptionLimit = config('filament-colorbook-picker.option_limit', null)){
+            return $configOptionLimit;
+        }
+
         return $this->evaluate($this->optionsLimit);
     }
 

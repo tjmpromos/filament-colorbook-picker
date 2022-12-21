@@ -18,6 +18,11 @@ trait HasOptions
 
     public function getOptions(): array
     {
+
+        if ($options = config('filament-colorbook-picker.default_color_book', null)){
+            return $options;
+        }
+
         $options = $this->evaluate($this->options) ?? [];
 
         if (is_string($options) && function_exists('enum_exists') && enum_exists($options)) {

@@ -18,6 +18,7 @@ class FilamentColorbookPickerServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('filament-colorbook-picker')
+            ->hasConfigFile()
             ->hasViews()
             ->hasAssets();
     }
