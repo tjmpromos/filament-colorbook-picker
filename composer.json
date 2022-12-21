@@ -59,7 +59,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "FilamentColorbookPickerServiceProvider"
+                "dymond\\FilamentPantoneColorPicker\\FilamentColorbookPickerServiceProvider"
             ],
             "aliases": {
                 "FilamentColorbookPicker": "FilamentColorbookPicker"
