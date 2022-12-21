@@ -63,13 +63,15 @@ Of course, you may specify your own custom `primary`, `success`, `warning` and `
 New Laravel projects use Vite for bundling assets by default. However, your project may still use Laravel Mix. Read the steps below for the bundler used in your project.
 
 ### Vite
-If you're using Vite, you should manually install [Autoprefixer](https://github.com/postcss/autoprefixer) through NPM:
+If you're using Vite, you should manually install [Autoprefixer](https://github.com/postcss/autoprefixer), [postcss-import](https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports) and [tailwindcss/nesting](https://tailwindcss.com/docs/using-with-preprocessors#nesting) through NPM:
 
 Create a `postcss.config.js` file in the root of your project, and register Tailwind CSS and Autoprefixer as plugins:
 
 ```js
 module.exports = {
     plugins: {
+        'postcss-import': {},
+        'tailwindcss/nesting': {},
         tailwindcss: {},
         autoprefixer: {},
     },
@@ -126,10 +128,26 @@ php artisan vendor:publish --tag="filament-colorbook-views"
 
 ## Usage
 
+This essentially works like the normal [select field](https://filamentphp.com/docs/2.x/forms/fields#select) in FilamentPHP with some extra options for adding colors. You'll reference it like this:
+
 ```php
-$masterForms = new Tjmpromos\MasterForms();
-echo $masterForms->echoPhrase('Hello, Tjmpromos!');
+ColorbookPicker::make('color_selection')
+    ->label('Your Label')
+    ->placeholder('Your Placeholder')
+    ->options([
+      ['label' => 'Color Display Name', 'value' => 'color_value_name', 'hex' => 'FFFFFF'],
+      ['label' => 'Color Display Name', 'value' => 'color_value_name', 'hex' => '000000'],
+    ])
+    ->searchable(),
 ```
+
+You'll want to make sure to format your color book in this same way as the options are formatted here.
+
+---
+
+The only difference between this and a regular select field is that `->allowHtml()` is always set to on. This isn't a very common option, so you may not have seen it used. It's essentially only ever set on select fields and it's just a passthrough to a [choices.js](https://github.com/Choices-js/Choices) method.
+
+This is something FilamentPHP's select field has by default so any security concerns you have with that should be considered here, but if you are using an external source to populate your options, you should be very careful that you have full control over it because this can allow XSS scripting injections. You can read more about that on [here on the choices.js repo](https://github.com/Choices-js/Choices#allowhtml).
 
 ## Testing
 
