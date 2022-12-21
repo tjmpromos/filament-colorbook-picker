@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentPantoneColorPicker\Database\Factories;
+namespace dymond\FilamentColorbookPicker\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

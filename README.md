@@ -1,10 +1,6 @@
-# Pantone Color Picker for FilamentPHP
+# Colorbook Picker for FilamentPHP
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/dymond/filament-pantone-color-picker.svg?style=flat-square)](https://packagist.org/packages/dymond/filament-pantone-color-picker)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/dymond/filament-pantone-color-picker/run-tests?label=tests)](https://github.com/dymond/filament-pantone-color-picker/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/dymond/filament-pantone-color-picker/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/dymond/filament-pantone-color-picker/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/dymond/filament-pantone-color-picker.svg?style=flat-square)](https://packagist.org/packages/dymond/filament-pantone-color-picker)
-
+FilamentPHP field to show options based on a predefined color book, with previews of the color value in the dropdown and around the field after selection.
 
 ## Requirements
 - PHP 8.0+
@@ -17,7 +13,7 @@
 You can install the package via composer:
 
 ```bash
-composer require dymond/filament-pantone-color-picker
+composer require dymond/filament-colorbook-picker
 ```
 
 The package uses the following dependencies:
@@ -116,51 +112,16 @@ window.Alpine = Alpine
 Alpine.start()
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="master-forms-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="master-forms-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
+php artisan vendor:publish --tag="filament-colorbook-config"
 ```
 
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="master-forms-views"
+php artisan vendor:publish --tag="filament-colorbook-views"
 ```
 
 ## Usage

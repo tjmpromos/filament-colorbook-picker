@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentPantoneColorPicker\Forms\Components\Concerns;
+namespace dymond\FilamentColorbookPicker\Forms\Components\Concerns;
 
 use Closure;
 use Filament\Forms\Components\Actions\Action;

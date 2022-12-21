@@ -1,19 +1,14 @@
 {
-    "name": "dymond/filament-pantone-color-picker",
-    "description": "Pantone color picker for Filamentphp",
+    "name": "dymond/filament-colorbook-picker",
+    "description": "FilamentPHP field to show options based on a predefined color book, with previews of the color value in the dropdown and around the field after selection.",
     "keywords": [
         "dymond",
         "laravel",
-        "filament-pantone-color-picker"
+        "filament-colorbook-picker"
     ],
-    "homepage": "https://github.com/dymond/filament-pantone-color-picker",
+    "homepage": "https://github.com/dymond/filament-colorbook-picker",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Frédéric Blanc",
-            "email": "frederic.blanc@itanea.fr",
-            "role": "Developer"
-        },
         {
             "name": "Cory Dymond",
             "email": "hi@corydymond.com",
@@ -39,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "dymond\\FilamentPantoneColorPicker\\": "src",
-            "dymond\\FilamentPantoneColorPicker\\Database\\Factories\\": "database/factories"
+            "dymond\\FilamentColorbookPicker\\": "src",
+            "dymond\\FilamentColorbookPicker\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "dymond\\FilamentPantoneColorPicker\\Tests\\": "tests"
+            "dymond\\FilamentColorbookPicker\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -64,10 +59,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "dymond\\FilamentPantoneColorPicker\\FilamentPantoneColorPickerServiceProvider"
+                "FilamentColorbookPickerServiceProvider"
             ],
             "aliases": {
-                "FilamentPantoneColorPicker": "FilamentPantoneColorPicker"
+                "FilamentColorbookPicker": "FilamentColorbookPicker"
             }
         }
     },
