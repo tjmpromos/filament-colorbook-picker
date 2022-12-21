@@ -6,6 +6,14 @@ This could be used for any number of colorbooks such as [Pantone®️](https://w
 
 All you need to do is provide the proper name (called label here), the value you want to pass to your form (usually the same as the label, but you may want to snake_case it or something) and a hex value (as of now, do not pass a #, but I plan on adding that check in very soon).
 
+## TODO
+
+- Add check for # in hex value
+- Maybe change `hex` to `colorValue` so that its clear you can pass in any valid CSS value (?)
+- Add color definitions to config file so that they can easily be called in the `->options()` method. Need to allow for multiple color books with any name.
+- Pass the `label` to a repeater label so that the label displays as the pretty name instead of the actual value
+
+
 ## Requirements
 - PHP 8.0+
 - Laravel 8.0+
