@@ -1,5 +1,5 @@
 <?php
 
-use dymond\FilamentColorbookPicker\Tests\TestCase;
+use Dymond\FilamentColorbookPicker\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

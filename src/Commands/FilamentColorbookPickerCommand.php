@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker\Commands;
+namespace Dymond\FilamentColorbookPicker\Commands;
 
 use Illuminate\Console\Command;
 

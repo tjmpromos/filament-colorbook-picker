@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker\Facades;
+namespace Dymond\FilamentColorbookPicker\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace dymond\FilamentColorbookPicker\Forms\Components;
+namespace Dymond\FilamentColorbookPicker\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
@@ -678,6 +678,11 @@ class ColorbookPicker extends Field
 
     public function getOptionsLimit(): int
     {
+
+        if ($configOptionLimit = config('filament-colorbook-picker.option_limit', null)){
+            return $configOptionLimit;
+        }
+
         return $this->evaluate($this->optionsLimit);
     }
 
