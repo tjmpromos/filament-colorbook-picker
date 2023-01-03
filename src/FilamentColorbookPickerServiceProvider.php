@@ -22,7 +22,9 @@ class FilamentColorbookPickerServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasAssets();
     }
-    public function packageBooted() {
+
+    public function packageBooted()
+    {
         Livewire::component('filament-colorbook-picker::colorbook-picker', ColorbookPicker::class);
     }
 }

@@ -6,9 +6,9 @@ use Closure;
 
 trait CanDisableOptions
 {
-    protected bool | Closure | null $isOptionDisabled = null;
+    protected bool|Closure|null $isOptionDisabled = null;
 
-    public function disableOptionWhen(bool | Closure $callback): static
+    public function disableOptionWhen(bool|Closure $callback): static
     {
         $this->isOptionDisabled = $callback;
 

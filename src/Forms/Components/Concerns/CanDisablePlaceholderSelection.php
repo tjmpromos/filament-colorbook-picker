@@ -6,9 +6,9 @@ use Closure;
 
 trait CanDisablePlaceholderSelection
 {
-    protected bool | Closure | null $isPlaceholderSelectionDisabled = false;
+    protected bool|Closure|null $isPlaceholderSelectionDisabled = false;
 
-    public function disablePlaceholderSelection(bool | Closure $condition = true): static
+    public function disablePlaceholderSelection(bool|Closure $condition = true): static
     {
         $this->isPlaceholderSelectionDisabled = $condition;
 

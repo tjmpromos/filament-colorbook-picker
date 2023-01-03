@@ -7,9 +7,9 @@ use Illuminate\Contracts\Support\Arrayable;
 
 trait HasOptions
 {
-    protected array | Arrayable | string | Closure | null $options = null;
+    protected array|Arrayable|string|Closure|null $options = null;
 
-    public function options(array | Arrayable | string | Closure | null $options): static
+    public function options(array|Arrayable|string|Closure|null $options): static
     {
         $this->options = $options;
 
@@ -18,8 +18,7 @@ trait HasOptions
 
     public function getOptions(): array
     {
-
-        if ($options = config('filament-colorbook-picker.default_color_book', null)){
+        if ($options = config('filament-colorbook-picker.default_color_book', null)) {
             return $options;
         }
 

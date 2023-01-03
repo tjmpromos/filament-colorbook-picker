@@ -7,9 +7,9 @@ use Illuminate\View\ComponentAttributeBag;
 
 trait HasExtraInputAttributes
 {
-    protected array | Closure $extraInputAttributes = [];
+    protected array|Closure $extraInputAttributes = [];
 
-    public function extraInputAttributes(array | Closure $attributes): static
+    public function extraInputAttributes(array|Closure $attributes): static
     {
         $this->extraInputAttributes = $attributes;
 

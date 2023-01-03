@@ -17,15 +17,16 @@ class ColorbookPicker extends Field
     protected bool $isOpen = false;
 
     public ?string $colorSelectedName = null;
+
     public ?string $colorSelectedHex = null;
 //    public ?string $colorSelectedRgb = null;
 
-    public function getColorSelectedName() : ?string
+    public function getColorSelectedName(): ?string
     {
         return $this->colorSelectedName;
     }
 
-    public function getColorSelectedHex() : ?string
+    public function getColorSelectedHex(): ?string
     {
         return $this->colorSelectedHex;
     }
@@ -35,13 +36,13 @@ class ColorbookPicker extends Field
 //        return $this->colorSelectedRgb;
 //    }
 
-    public function getColors() : ?array
+    public function getColors(): ?array
     {
         return $this->getOptions();
 //        return $this->solidColors;
     }
 
-    public function isOpen() : ?bool
+    public function isOpen(): ?bool
     {
         return $this->isOpen;
     }
@@ -57,13 +58,13 @@ class ColorbookPicker extends Field
     use Concerns\HasExtraInputAttributes;
     use HasExtraAlpineAttributes;
 
-    protected array | Closure | null $createOptionActionFormSchema = null;
+    protected array|Closure|null $createOptionActionFormSchema = null;
 
     protected ?Closure $createOptionUsing = null;
 
     protected ?Closure $modifyCreateOptionActionUsing = null;
 
-    protected bool | Closure $isMultiple = false;
+    protected bool|Closure $isMultiple = false;
 
     protected ?Closure $getOptionLabelUsing = null;
 
@@ -73,17 +74,17 @@ class ColorbookPicker extends Field
 
     protected ?array $searchColumns = null;
 
-    protected string | Closure | null $maxItemsMessage = null;
+    protected string|Closure|null $maxItemsMessage = null;
 
-    protected string | Closure | null $position = null;
+    protected string|Closure|null $position = null;
 
-    protected string | Closure | null $relationshipTitleColumnName = null;
+    protected string|Closure|null $relationshipTitleColumnName = null;
 
     protected ?Closure $getOptionLabelFromRecordUsing = null;
 
-    protected string | Closure | null $relationship = null;
+    protected string|Closure|null $relationship = null;
 
-    protected int | Closure $optionsLimit = 50;
+    protected int|Closure $optionsLimit = 50;
 
     public function createOptionAction(?Closure $callback): static
     {
@@ -92,7 +93,7 @@ class ColorbookPicker extends Field
         return $this;
     }
 
-    public function createOptionForm(array | Closure | null $schema): static
+    public function createOptionForm(array|Closure|null $schema): static
     {
         $this->createOptionActionFormSchema = $schema;
 
@@ -219,7 +220,7 @@ class ColorbookPicker extends Field
         return $this;
     }
 
-    public function searchable(bool | array | Closure $condition = true): static
+    public function searchable(bool|array|Closure $condition = true): static
     {
         if (is_array($condition)) {
             $this->isSearchable = true;
@@ -232,28 +233,28 @@ class ColorbookPicker extends Field
         return $this;
     }
 
-    public function multiple(bool | Closure $condition = true): static
+    public function multiple(bool|Closure $condition = true): static
     {
         $this->isMultiple = $condition;
 
         return $this;
     }
 
-    public function position(string | Closure | null $position): static
+    public function position(string|Closure|null $position): static
     {
         $this->position = $position;
 
         return $this;
     }
 
-    public function maxItemsMessage(string | Closure | null $message): static
+    public function maxItemsMessage(string|Closure|null $message): static
     {
         $this->maxItemsMessage = $message;
 
         return $this;
     }
 
-    public function optionsLimit(int | Closure $limit): static
+    public function optionsLimit(int|Closure $limit): static
     {
         $this->optionsLimit = $limit;
 
@@ -333,7 +334,7 @@ class ColorbookPicker extends Field
     protected function transformOptionsForJs(array $options): array
     {
         return collect($options)
-            ->map(fn ($data): array => [ 'label' => $data['label'] . '<span style="background-color:#'. $data['hex'] . '"></span>', 'value' => $data['value'] ])
+            ->map(fn ($data): array => ['label' => $data['label'].'<span style="background-color:#'.$data['hex'].'"></span>', 'value' => $data['value']])
             ->values()
             ->all();
     }
@@ -348,7 +349,7 @@ class ColorbookPicker extends Field
         return $this->evaluate($this->isSearchable) || $this->isMultiple();
     }
 
-    public function relationship(string | Closure $relationshipName, string | Closure $titleColumnName, ?Closure $callback = null): static
+    public function relationship(string|Closure $relationshipName, string|Closure $titleColumnName, ?Closure $callback = null): static
     {
         $this->relationship = $relationshipName;
         $this->relationshipTitleColumnName = $titleColumnName;
@@ -637,7 +638,7 @@ class ColorbookPicker extends Field
         return parent::getLabel();
     }
 
-    public function getRelationship(): BelongsTo | BelongsToMany | \Znck\Eloquent\Relations\BelongsToThrough | null
+    public function getRelationship(): BelongsTo|BelongsToMany|\Znck\Eloquent\Relations\BelongsToThrough|null
     {
         $name = $this->getRelationshipName();
 
@@ -678,12 +679,10 @@ class ColorbookPicker extends Field
 
     public function getOptionsLimit(): int
     {
-
-        if ($configOptionLimit = config('filament-colorbook-picker.option_limit', null)){
+        if ($configOptionLimit = config('filament-colorbook-picker.option_limit', null)) {
             return $configOptionLimit;
         }
 
         return $this->evaluate($this->optionsLimit);
     }
-
 }
